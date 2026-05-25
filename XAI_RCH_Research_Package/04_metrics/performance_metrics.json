@@ -1,0 +1,24 @@
+{
+  "n_train": 211,
+  "n_test": 71,
+  "accuracy": 0.9155,
+  "auc_roc_test": 0.9457,
+  "cv_auc_mean": 0.9371,
+  "cv_auc_std": 0.0321,
+  "precision_diabetes": 0.905,
+  "recall_diabetes": 0.826,
+  "f1_diabetes": 0.864,
+  "precision_no_diabetes": 0.92,
+  "recall_no_diabetes": 0.958,
+  "f1_no_diabetes": 0.939,
+  "confusion_matrix": [
+    [
+      46,
+      2
+    ],
+    [
+      4,
+      19
+    ]
+  ]
+}

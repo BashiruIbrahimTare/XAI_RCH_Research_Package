@@ -1,0 +1,15 @@
+Dataset: Pima Indians Diabetes Dataset
+Source:  UCI Machine Learning Repository
+URL:     https://archive.ics.uci.edu/dataset/34/diabetes
+License: Public Domain (Creative Commons CC0)
+
+Original citation:
+  Smith, J. W., Everhart, J. E., Dickson, W. C., Knowler, W. C., &
+  Johannes, R. S. (1988). Using the ADAP learning algorithm to forecast
+  the onset of diabetes mellitus. Proceedings of the Annual Symposium on
+  Computer Application in Medical Care, 261-265.
+
+Preprocessing applied in this study:
+  - Removed duplicate records (768 -> 282 after deduplication)
+  - Replaced physiologically implausible zeros in Glucose, BloodPressure,
+    SkinThickness, Insulin, BMI with column-wise median values

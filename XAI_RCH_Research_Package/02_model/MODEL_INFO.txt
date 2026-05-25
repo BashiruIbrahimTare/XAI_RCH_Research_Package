@@ -1,0 +1,47 @@
+XGBoost Classifier — Training Configuration
+============================================
+Framework:        XGBoost 2.x  (Chen & Guestrin, 2016)
+Python version:   3.12
+
+Hyperparameters (Section 2.5.2 of manuscript):
+  n_estimators     : 300
+  max_depth        : 4
+  learning_rate    : 0.04
+  subsample        : 0.8
+  colsample_bytree : 0.8
+  eval_metric      : logloss
+  random_state     : 42
+
+Data split: 75% train (n=211) / 25% test (n=71), stratified
+
+Performance (Table 3, manuscript):
+  Accuracy        : 91.5%
+  AUC-ROC (test)  : 0.946
+  AUC-ROC (5-fold CV): 0.937 ± 0.032
+
+Loading instructions:
+  # Option 1 — sklearn API (recommended)
+  import joblib
+  model = joblib.load('xai_rch_xgboost_model.joblib')
+  predictions = model.predict(X_new)
+  probabilities = model.predict_proba(X_new)[:, 1]
+
+  # Option 2 — XGBoost native
+  import xgboost as xgb
+  model = xgb.XGBClassifier()
+  model.load_model('xai_rch_xgboost_model.json')
+
+Feature order (must match for predictions):
+  1. Pregnancies
+  2. Glucose
+  3. BloodPressure
+  4. SkinThickness
+  5. Insulin
+  6. BMI
+  7. DiabetesPedigreeFunction
+  8. Age
+
+Output:
+  predict()        -> 0 (No Diabetes) or 1 (Diabetes)
+  predict_proba()  -> [P(No Diabetes), P(Diabetes)]
+  Threshold: P >= 0.5 -> Diabetes

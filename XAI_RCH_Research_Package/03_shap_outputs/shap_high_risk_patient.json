@@ -1,0 +1,30 @@
+{
+  "test_set_index": 11,
+  "predicted_probability": 0.9919,
+  "actual_label": 1,
+  "actual_diagnosis": "Diabetic",
+  "clinical_features": {
+    "Number of Pregnancies": 6.0,
+    "Blood Glucose Level": 171.0,
+    "Diastolic Blood Pressure": 76.0,
+    "Skin-fold Thickness": NaN,
+    "Serum Insulin Level": NaN,
+    "Body Mass Index (BMI)": 37.0,
+    "Diabetes Pedigree Function": 0.587,
+    "Patient Age (years)": 52.0
+  },
+  "shap_values": {
+    "Number of Pregnancies": 0.26461824774742126,
+    "Blood Glucose Level": 2.2473418712615967,
+    "Diastolic Blood Pressure": 0.4050568640232086,
+    "Skin-fold Thickness": 0.1439318060874939,
+    "Serum Insulin Level": 0.1593366116285324,
+    "Body Mass Index (BMI)": 0.827268660068512,
+    "Diabetes Pedigree Function": 0.5513420104980469,
+    "Patient Age (years)": 0.9560080766677856
+  },
+  "baseline_E_fx": -0.7419568300247192,
+  "sum_shap_values": 5.5549,
+  "f_x_minus_E_fx": "0.6694",
+  "note_eq6": "sum_shap_values \u2248 f(x) - E[f(x)], confirming Equation 6 additive fidelity"
+}

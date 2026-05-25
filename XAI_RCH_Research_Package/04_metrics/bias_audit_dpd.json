@@ -1,0 +1,12 @@
+{
+  "metric": "Demographic Parity Difference (DPD) [Equation 10]",
+  "protected_attribute": "Age group (\u226435 vs >35)",
+  "note": "Demonstration only \u2014 Phase 2 will audit gender, region, ethnicity on Ghanaian data",
+  "group_0_label": "Age \u2264 35",
+  "group_1_label": "Age > 35",
+  "group_0_positive_rate": 0.186,
+  "group_1_positive_rate": 0.4643,
+  "DPD": 0.2782,
+  "deployment_threshold": 0.05,
+  "passes_threshold": false
+}
